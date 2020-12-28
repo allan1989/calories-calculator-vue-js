@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center pt-5 pb-5">Calories Counter</h1>
+      </div>  
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-sm-12">
+        <fruitsList :data='fruits'></fruitsList> 
+      </div> 
+      <div class="col-lg-4 col-sm-12">
+        <p>test 2</p>
+      </div> 
+      <div class="col-lg-4 col-sm-12">
+        <p>test 3</p>
+      </div> 
+    </div> 
+  </div>  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import {data} from './assets/data.js';
+  import fruitsList from './components/FruitsList.vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+ export default {
+   components: {
+     fruitsList: fruitsList
+   },
+   data: function(){
+    return {
+       fruits: data
+    }
   }
-}
+ }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
