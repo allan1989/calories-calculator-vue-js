@@ -3,20 +3,17 @@
     <li 
       class="list-group-item"
       v-for="fruit in data" 
-      @click="addFruit(fruit.name)"
+      @click="addFruitFn({name: fruit.name, calories: fruit.calories})"
       :key='fruit.name'>{{ fruit.name }}</li>
   </ul>  
 </template>
 
 <script>
 export default {
-  props: ['data'],
-  methods: {
-    addFruit: function(e){
-      console.log(e)
-    }
-  }
-
+  props: {
+    data: Array,
+    addFruitFn: Function
+  },
 }
 </script>
 
