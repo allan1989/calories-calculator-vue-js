@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### View project online:
+[https://calories-calculator-vue-js.netlify.app](https://calories-calculator-vue-js.netlify.app/)
